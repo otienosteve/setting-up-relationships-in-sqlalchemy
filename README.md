@@ -153,7 +153,7 @@ You should get a new database Schema similar to the one depicted on the image be
 
 ### Seeding Data    
 The next step is to seed data to our new Tables so that we have some data to work with.  
-In the seed.py file add data the following lines of code and comment out the code for seeding anew student.     
+In the seed.py file add data the following lines of code and comment out the code for seeding new students.        
 ```
 from faker import Faker
 from faker.providers import DynamicProvider
@@ -221,8 +221,14 @@ for i in range(40):
     class_data.students.append(students[randint(0,18)])
     session.add(class_data)
     session.commit()
-    
-```   
+
+```     
+After adding the code above open the terminal and run the file with your python interpreter.    
+`python3 seed.py`  or  `python seed.py`     
+After running the command open your database using the sqlite explorer and confirm if data has been added.  
+If data has been added then you are set to move to the next step where we will explore how to work with relations in fastapi.   
+ 
+
 
 
 
